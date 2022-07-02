@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
@@ -41,7 +40,7 @@ class chat_rooms extends Model
      * @var array
      */
     protected $casts = [
-        'chat_id' => 'string',
+        'chat_id' => 'integer',
         'status' => 'string',
         'created_by' => 'string',
         'updated_by' => 'string',
@@ -57,7 +56,7 @@ class chat_rooms extends Model
      * @var array
      */
     public static $rules = [
-        'chat_id' => 'nullable|string',
+        'chat_id' => 'nullable|integer',
         'status' => 'nullable|string',
         'created_by' => 'nullable|string',
         'updated_by' => 'nullable|string',

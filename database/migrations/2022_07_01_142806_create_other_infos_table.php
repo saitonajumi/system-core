@@ -16,7 +16,7 @@ class CreateOtherInfosTable extends Migration
     {
         Schema::create('other_infos', function (Blueprint $table) {
             $table->id();
-            $table->string('users_id')->nullable();
+            $table->bigInteger('users_id')->nullable();
             $table->string('photo')->nullable();
             $table->string('infos')->nullable();
             $table->string('status')->nullable();

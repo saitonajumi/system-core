@@ -16,7 +16,7 @@ class CreateGuidancesTable extends Migration
     {
         Schema::create('guidances', function (Blueprint $table) {
             $table->id();
-            $table->string('users_id')->nullable();
+            $table->bigInteger('users_id')->nullable();
             $table->string('referral_code')->nullable();
             $table->string('status')->nullable();
             $table->string('created_by')->nullable();

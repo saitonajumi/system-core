@@ -22,14 +22,14 @@ class appointment_categoryFactory extends Factory
     public function definition()
     {
         return [
-            'appointment_id' => $this->faker->word,
-        'category_id' => $this->faker->word,
+            'appointment_id' => $this->faker->numberBetween(1, 100),
+        'category_id' => $this->faker->numberBetween(1, 100),
         'data' => $this->faker->word,
-        'status' => $this->faker->word,
-        'created_by' => $this->faker->word,
-        'updated_by' => $this->faker->word,
-        'disable_by' => $this->faker->word,
-        'disable_at' => $this->faker->word,
+        'status' => $this->faker->randomElement(['O', 'P']),
+        'created_by' => $this->faker->name,
+        'updated_by' => $this->faker->name,
+        'disable_by' => $this->faker->name,
+        'disable_at' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

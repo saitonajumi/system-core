@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 
 /**
  * Class academic_infos
@@ -47,7 +47,7 @@ class academic_infos extends Model
      * @var array
      */
     protected $casts = [
-        'users_id' => 'string',
+        'users_id' => 'integer',
         'college' => 'string',
         'academic_year_level' => 'string',
         'section' => 'string',
@@ -64,7 +64,7 @@ class academic_infos extends Model
      * @var array
      */
     public static $rules = [
-        'users_id' => 'nullable|string',
+        'users_id' => 'nullable|integer',
         'college' => 'nullable|string',
         'academic_year_level' => 'nullable|string',
         'section' => 'nullable|string',

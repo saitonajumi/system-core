@@ -16,7 +16,7 @@ class CreateAcademicInfosTable extends Migration
     {
         Schema::create('academic_infos', function (Blueprint $table) {
             $table->id();
-            $table->string('users_id')->nullable();
+            $table->bigInteger('users_id')->nullable();
             $table->string('college')->nullable();
             $table->string('academic_year_level')->nullable();
             $table->string('section')->nullable();

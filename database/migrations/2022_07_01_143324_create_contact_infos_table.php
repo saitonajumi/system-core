@@ -16,7 +16,7 @@ class CreateContactInfosTable extends Migration
     {
         Schema::create('contact_infos', function (Blueprint $table) {
             $table->id();
-            $table->string('users_id')->nullable();
+            $table->bigInteger('users_id')->nullable();
             $table->string('contact_number')->nullable();
             $table->string('status')->nullable();
             $table->string('created_by')->nullable();

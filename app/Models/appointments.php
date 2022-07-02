@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-use Eloquent as Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model as Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
@@ -53,9 +52,9 @@ class appointments extends Model
      * @var array
      */
     protected $casts = [
-        'users_id' => 'string',
-        'category_id' => 'string',
-        'guidance_id' => 'string',
+        'users_id' => 'integer',
+        'category_id' => 'integer',
+        'guidance_id' => 'integer',
         'reason' => 'string',
         'notes' => 'string',
         'status' => 'string',
@@ -73,9 +72,9 @@ class appointments extends Model
      * @var array
      */
     public static $rules = [
-        'users_id' => 'nullable|string',
-        'category_id' => 'nullable|string',
-        'guidance_id' => 'nullable|string',
+        'users_id' => 'nullable|integer',
+        'category_id' => 'nullable|integer',
+        'guidance_id' => 'nullable|integer',
         'reason' => 'nullable|string',
         'notes' => 'nullable|string',
         'status' => 'nullable|string',

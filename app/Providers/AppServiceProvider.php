@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Nuwave\Lighthouse\Schema\TypeRegistry;
+use MLL\GraphQLScalars\MixedScalar;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $typeRegistry = app(TypeRegistry::class);
+        $typeRegistry->register(new MixedScalar());
     }
 }

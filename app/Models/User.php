@@ -50,4 +50,33 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function otherInfo () {
+        return $this->hasOne(other_infos::class, 'users_id', 'id');
+    }
+
+    public function academicInfo () {
+        return $this->hasOne(academic_infos::class, 'users_id', 'id');
+    }
+
+    public function contactInfos () {
+        return $this->hasMany(contact_infos::class, 'users_id', 'id');
+    }
+
+    public function appointments () {
+        return $this->hasMany(appointments::class, 'users_id', 'id');
+    }
+
+    public function guidance () {
+        return $this->hasMany(guidances::class, 'users_id', 'id');
+    }
+
+    public function instructors () {
+        return $this->hasMany(instructors::class, 'users_id', 'id');
+    }
+
+    public function chats () {
+        return $this->hasMany(chats::class, 'receiver_id', 'id');
+    }
+
 }

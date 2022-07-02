@@ -16,9 +16,9 @@ class CreateChatsTable extends Migration
     {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
-            $table->string('sender_id')->nullable();
+            $table->bigInteger('sender_id')->nullable();
             $table->string('sender_message')->nullable();
-            $table->string('receiver_id')->nullable();
+            $table->bigInteger('receiver_id')->nullable();
             $table->string('receiver_message')->nullable();
             $table->string('referral_code')->nullable();
             $table->string('status')->nullable();

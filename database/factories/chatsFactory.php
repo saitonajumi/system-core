@@ -22,16 +22,16 @@ class chatsFactory extends Factory
     public function definition()
     {
         return [
-            'sender_id' => $this->faker->word,
+            'sender_id' => $this->faker->numberBetween(1, 100),
         'sender_message' => $this->faker->word,
-        'receiver_id' => $this->faker->word,
+        'receiver_id' => $this->faker->numberBetween(1, 100),
         'receiver_message' => $this->faker->word,
-        'referral_code' => $this->faker->word,
-        'status' => $this->faker->word,
-        'created_by' => $this->faker->word,
-        'updated_by' => $this->faker->word,
-        'disable_by' => $this->faker->word,
-        'disable_at' => $this->faker->word,
+        'referral_code' => $this->faker->postcode,
+        'status' => $this->faker->randomElement(['O', 'P']),
+        'created_by' => $this->faker->name,
+        'updated_by' => $this->faker->name,
+        'disable_by' => $this->faker->name,
+        'disable_at' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];
