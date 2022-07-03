@@ -26,7 +26,6 @@ final class AllUsers
 
         $users = [];
         $usersData = [];
-        $collectUsers = [];
 
         $users = User::query()
             ->with([
@@ -39,18 +38,11 @@ final class AllUsers
                 'chats',
             ])
             ->where('name', 'ILIKE', '%' . $student . '%')
-            ->orderBy('id')
+            ->orderBy('name')
             ->get();
 
         if ($users) {
-            foreach ($users as $user) {
-//                $user['other_infos'] = $this->getOtherInfos($user['id']);
-                $collectUsers[] = $user;
-            }
-        }
-
-        if ($collectUsers) {
-            $collectedUsers = collect($collectUsers);
+            $collectedUsers = collect($users);
             if ($registration_type) {
                 $collectedUsers = $collectedUsers
                     ->filter(function ($item) use ($registration_type) {

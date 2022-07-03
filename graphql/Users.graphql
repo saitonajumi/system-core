@@ -19,7 +19,7 @@ extend type Query {
         student: String
         registration_type : String
         status: String
-    ): JsonResponse
+    ): JsonResponse @guard(checks: ["auth:api"])
 }
 
 type Mutation {
