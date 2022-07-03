@@ -21,38 +21,3 @@ extend type Query {
         status: String
     ): JsonResponse @guard(checks: ["auth:api"])
 }
-
-type Mutation {
-    createUser(
-        name: String
-        email: String
-        password: String
-        email_verified_at: String
-        remember_token: String
-        registration_type: String
-        status: String
-        created_by: String
-        updated_by: String
-        created_at: String
-        updated_at: String
-        disable_by: String
-        disable_at: String
-    ): User @create @validate(rules: "rules", column: "name")
-}
-
-"Account of a person who utilizes this application."
-type User {
-    id: ID!
-    name: String
-    email: String
-    email_verified_at: String
-    remember_token: String
-    registration_type: String
-    status: String
-    created_by: String
-    updated_by: String
-    created_at: String
-    updated_at: String
-    disable_by: String
-    disable_at: String
-}
