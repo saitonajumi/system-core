@@ -21,3 +21,9 @@ extend type Query {
         status: String
     ): JsonResponse
 }
+
+extend type Mutation {
+    deleteUser(
+        id: ID!
+    ): JsonResponse
+}
