@@ -19,5 +19,5 @@ extend type Query {
         student: String
         registration_type : String
         status: String
-    ): JsonResponse @guard(checks: ["auth:api"])
+    ): JsonResponse
 }
