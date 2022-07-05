@@ -22,7 +22,7 @@ class announcementsFactory extends Factory
     public function definition()
     {
         return [
-            'users_id' => $this->faker->numberBetween(1, 100),
+            'users_id' => $this->faker->numberBetween(1, 5),
         'title' => $this->faker->title,
         'feature_description' => $this->faker->word,
         'status' => $this->faker->randomElement(['O','P']),

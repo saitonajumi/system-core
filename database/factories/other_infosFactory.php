@@ -22,7 +22,7 @@ class other_infosFactory extends Factory
     public function definition()
     {
         return [
-            'users_id' => $this->faker->numberBetween(1, 100),
+            'users_id' => $this->faker->numberBetween(1, 5),
         'photo' => $this->faker->imageUrl,
         'infos' => $this->faker->jobTitle,
         'status' => $this->faker->randomElement(['O', 'P']),

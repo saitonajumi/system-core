@@ -22,7 +22,7 @@ class guidancesFactory extends Factory
     public function definition()
     {
         return [
-            'users_id' => $this->faker->numberBetween(1, 100),
+            'users_id' => $this->faker->numberBetween(1, 5),
         'referral_code' => $this->faker->postcode,
         'status' => $this->faker->randomElement(['O', 'P']),
         'created_by' => $this->faker->name,

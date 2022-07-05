@@ -22,9 +22,9 @@ class chatsFactory extends Factory
     public function definition()
     {
         return [
-            'sender_id' => $this->faker->numberBetween(1, 100),
+            'sender_id' => $this->faker->numberBetween(1, 5),
         'sender_message' => $this->faker->word,
-        'receiver_id' => $this->faker->numberBetween(1, 100),
+        'receiver_id' => $this->faker->numberBetween(1, 5),
         'receiver_message' => $this->faker->word,
         'referral_code' => $this->faker->postcode,
         'status' => $this->faker->randomElement(['O', 'P']),

@@ -22,7 +22,7 @@ class chat_roomsFactory extends Factory
     public function definition()
     {
         return [
-            'chat_id' => $this->faker->numberBetween(1, 100),
+            'chat_id' => $this->faker->numberBetween(1, 5),
         'status' => $this->faker->randomElement(['O', 'P']),
         'created_by' => $this->faker->name,
         'updated_by' => $this->faker->name,

@@ -22,7 +22,7 @@ class academic_infosFactory extends Factory
     public function definition()
     {
         return [
-         'users_id' => $this->faker->numberBetween(1, 100),
+         'users_id' => $this->faker->numberBetween(1, 5),
         'college' => $this->faker->word,
         'academic_year_level' => $this->faker->numberBetween(1, 4),
         'section' => $this->faker->word,

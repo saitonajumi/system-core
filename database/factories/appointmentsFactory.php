@@ -22,9 +22,9 @@ class appointmentsFactory extends Factory
     public function definition()
     {
         return [
-            'users_id' => $this->faker->numberBetween(1, 100),
-        'category_id' => $this->faker->numberBetween(1, 100),
-        'guidance_id' => $this->faker->numberBetween(1, 100),
+            'users_id' => $this->faker->numberBetween(1, 5),
+        'category_id' => $this->faker->numberBetween(1, 5),
+        'guidance_id' => $this->faker->numberBetween(1, 5),
         'reason' => $this->faker->word,
         'notes' => $this->faker->word,
         'status' => $this->faker->randomElement(['O', 'P']),

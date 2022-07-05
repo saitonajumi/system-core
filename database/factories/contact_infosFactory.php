@@ -22,7 +22,7 @@ class contact_infosFactory extends Factory
     public function definition()
     {
         return [
-            'users_id' => $this->faker->numberBetween(1, 100),
+            'users_id' => $this->faker->numberBetween(1, 5),
         'contact_number' => $this->faker->phoneNumber,
         'status' => $this->faker->randomElement(['O', 'P']),
         'created_by' => $this->faker->name,

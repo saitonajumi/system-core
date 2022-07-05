@@ -22,8 +22,8 @@ class appointment_categoryFactory extends Factory
     public function definition()
     {
         return [
-            'appointment_id' => $this->faker->numberBetween(1, 100),
-        'category_id' => $this->faker->numberBetween(1, 100),
+            'appointment_id' => $this->faker->numberBetween(1, 5),
+        'category_id' => $this->faker->numberBetween(1, 5),
         'data' => $this->faker->word,
         'status' => $this->faker->randomElement(['O', 'P']),
         'created_by' => $this->faker->name,
