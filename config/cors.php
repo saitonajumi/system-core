@@ -15,7 +15,8 @@ return [
     |
     */
 
-    'paths' => ['api/*','graphql','/'],
+//    'paths' => ['api/*','graphql','/'],
+    'paths' => ['*'],
 
     'allow_methods' => [
         'POST',
@@ -31,22 +32,16 @@ return [
     'allowed_origins_patterns' => [],
 
     'allow_headers' => [
-        'Content-Type',
-        'X-Auth-Token',
-        'Origin',
-        'Authorization',
+        'content-type',
+        'accept',
+        'x-custom-header',
     ],
 
     'expose_headers' => [
-        'Cache-Control',
-        'Content-Language',
-        'Content-Type',
-        'Expires',
-        'Last-Modified',
-        'Pragma',
+        'x-custom-response-header'
     ],
 
-    'max_age' => 60 * 60 * 24,
+    'max_age' => 60,
 
     'supports_credentials' => false,
 
